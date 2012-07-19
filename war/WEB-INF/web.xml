@@ -10,9 +10,21 @@
  </servlet>
  <servlet-mapping>
   <servlet-name>guestbook</servlet-name>
-  <url-pattern>/guestbook</url-pattern>
+  <url-pattern>/</url-pattern>
  </servlet-mapping>
   <welcome-file-list>
         <welcome-file>index.html</welcome-file>
  </welcome-file-list>
+ <servlet>
+  <servlet-name>SystemServiceServlet</servlet-name>
+  <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+  <init-param>
+   <param-name>services</param-name>
+   <param-value/>
+  </init-param>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>SystemServiceServlet</servlet-name>
+  <url-pattern>/_ah/spi/*</url-pattern>
+ </servlet-mapping>
 </web-app>

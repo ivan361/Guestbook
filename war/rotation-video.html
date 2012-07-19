@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML5 c'est vraiment bien</title>
+<style type="text/css">
+video
+{
+	-webkit-transform : rotate(0deg);
+}
+</style>
+<script type="text/javascript">
+var deg=0;
+function f()
+{
+	var x= document.getElementById('video').style;
+	x.webkitTransform="rotate("+deg+"deg)";
+	deg=deg+0.1;
+}
+
+function g()
+{
+setInterval(f,10);
+}
+</script>
+</head>
+<body>
+<video id="video" src="http://www.w3schools.com/html5/movie.mp4" controls="controls"></video>
+<br><br>
+<button type="button" onclick="g();">Rotation !</button>
+</body>
+</html>
